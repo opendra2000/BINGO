@@ -1,0 +1,52 @@
+{
+  "name": "sensory-bingo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "classnames": "^2.3.1",
+    "firebase": "^9.17.1",
+    "howler": "^2.2.1",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-audio-player": "^0.17.0",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "shufflejs": "^5.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.2",
+    "@types/jquery": "^3.5.5",
+    "@types/lodash": "^4.14.170",
+    "node-sass": "^6.0.0"
+  }
+}

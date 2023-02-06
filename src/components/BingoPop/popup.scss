@@ -1,0 +1,107 @@
+.win-option {
+  /* color + background */
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+
+  /* typeface */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  font-size: 1em;
+  font-family: "Mont Demo Heavy", sans-serif;
+  text-transform: uppercase;
+
+  /* position */
+  position: relative;
+  display: inline-block !important;
+  margin-right: 2em;
+  z-index: 2000;
+
+  &:hover {
+    /* animation */
+    cursor: pointer;
+    --webkit-animation: hover 1200ms linear 2 alternate;
+    animation: hover 1200ms linear 2 alternate;
+  }
+}
+
+.play-again {
+  background-color: #cdd32d;
+  box-shadow: 0 5px 15px rgba(105, 160, 243, .4);
+}
+
+.shuffle {
+  background-color: rgba(121, 200, 210, 0.95);
+  box-shadow: 0 5px 15px rgba(195, 108, 205, .4);
+}
+
+.win-choose {
+  width: 60%;
+  height: 20%;
+  left: 66%;
+  top: 55%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 200;
+}
+
+.play-option {
+  display: inline-block;
+  margin-left: 0.5em;
+  vertical-align: bottom;
+  font-size: 20px !important;
+  line-height: 0;
+}
+
+.play-icon {
+  vertical-align: top;
+  padding-top: 12px;
+  font-size: 18px !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .win-option {
+    padding-top: 0px;
+
+    &:hover {
+      /* animation */
+      cursor: pointer;
+      --webkit-animation: none;
+      animation: none;
+    }
+  }
+
+  .win-choose {
+    top: 30%;
+    left: 55%;
+  }
+
+  .play-option {
+    vertical-align: bottom;
+    font-size: 12px !important;
+  }
+
+  .play-icon {
+    font-size: 12px !important;
+    vertical-align: top;
+    margin-bottom: 0.6em;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .win-choose {
+    top: 40%;
+    left: 55%;
+  }
+
+  .bingo-announcement {
+    top: 30%;
+  }
+
+  canvas {
+    display: none;
+  }
+}

@@ -1,0 +1,175 @@
+$color1: rgba(255, 255, 255, 0.8);
+$color2: rgba(2, 249, 199, 0.743);
+
+@import url("https://use.typekit.net/cqo6qvi.css");
+
+@font-face {
+    font-family: 'Mont Demo Heavy';
+    src: url("../../assets/fonts/montdemo-heavy.otf") format('opentype');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+// for the board
+.main-board {
+    height: auto;
+    width: 100%;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 1;
+}
+
+//for the tiles square
+.bingo-square {
+    height: 110px;
+    width: 90%;
+    padding: 5%;
+    margin: 0;
+    flex: 1 0 auto;
+    position: relative;
+    color: $color1;
+    background-color: black;
+
+    h5 {
+        font-family: "Mont Demo Heavy", sans-serif;
+        font-size: 1.1em;
+        display: block;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 0.5em;
+        padding: 5% 0 0;
+        margin: 0;
+    }
+
+    h6 {
+        font-family: korolev-rounded, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 0.9em;
+        text-align: center;
+        display: block;
+        position: relative;
+        white-space: pre-wrap;
+        padding-top: 0;
+        margin-top: 1.5em;
+    }
+
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color2 !important;
+        opacity: 0.7;
+        backdrop-filter: blur(2px);
+        transform: scale(1.1);
+        transition: 0.3s ease-in-out;
+        z-index: 2;
+    }
+
+}
+
+.active {
+    display: block;
+
+}
+
+.inactive {
+    display: none;
+}
+
+.bingo-announcement {
+    font-size: 10em;
+    text-transform: uppercase;
+    font-family: "Mont Demo Heavy", sans-serif;
+    text-align: center !important;
+    color: #56ba62;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 100;
+    animation: pulse 2s infinite;
+    text-shadow: 0 0 rgb(106, 102, 226);
+}
+
+// for the bouncy BINGO text 
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.95);
+        text-shadow: 0 0 rgb(106, 102, 226);
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(1);
+        text-shadow: 10px 10px rgba(226, 102, 184, 0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.95);
+        text-shadow: 0 0 rgba(226, 102, 184, 0);
+    }
+}
+
+// board responsiveness to different screens
+
+@media only screen and (max-width: 1024px) {
+    .bingo-square {
+        height: 100px;
+
+        h5 {
+            font-size: 0.8em;
+        }
+
+        h6 {
+            font-size: 0.75em;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .bingo-square {
+        height: 80px;
+
+        h5 {
+            font-size: 0.8em;
+        }
+
+        h6 {
+            font-size: 0.6em;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main-board {
+        height: auto;
+        width: 100%;
+        left: 0% !important;
+        top: 50% !important;
+        zoom: 57%;
+        overflow-x: hidden;
+    }
+
+    .bingo-square {
+        height: 90%;
+        width: 100px;
+
+        h5 {
+            font-size: 0.8em;
+            display: none;
+        }
+
+        h6 {
+            font-size: 1.2em;
+        }
+    }
+}

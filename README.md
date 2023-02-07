@@ -1,7 +1,7 @@
 # Technical Challenge
 
 Bingo application
-
+https://bingo-56818.web.app/
 ### Architecture Notes
 
 ---
